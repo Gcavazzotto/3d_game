@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dgfjturr7ynw1"]
+
+[ext_resource type="PackedScene" uid="uid://odg08qe8i48c" path="res://Rose.glb" id="1_t4gvv"]
+
+[node name="Rose" unique_id=1993189312 instance=ExtResource("1_t4gvv")]

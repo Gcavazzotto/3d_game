@@ -2,7 +2,11 @@
 
 [ext_resource type="Script" uid="uid://b48hdt15ewfbr" path="res://steve.gd" id="1_bh3ft"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bh3ft"]
+albedo_color = Color(1, 1, 0.2509804, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_hdy3p"]
+material = SubResource("StandardMaterial3D_bh3ft")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bh3ft"]
 
@@ -14,3 +18,13 @@ mesh = SubResource("BoxMesh_hdy3p")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=746957154]
 shape = SubResource("BoxShape3D_bh3ft")
+
+[node name="Camera_Controller" type="Node3D" parent="." unique_id=165610105]
+top_level = true
+
+[node name="Camera_Target" type="Node3D" parent="Camera_Controller" unique_id=1156318399]
+transform = Transform3D(1, 0, 0, 0, 0.9165373, 0.39994913, 0, -0.39994913, 0.9165373, 0, 1.9665701, 3.9301112)
+
+[node name="Camera3D" type="Camera3D" parent="Camera_Controller/Camera_Target" unique_id=1339667282]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15680714, 3.7252903e-09)
+current = true
